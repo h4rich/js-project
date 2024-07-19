@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+
+    <style>
+        h1{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            font-size: 3.5rem;
+        }
+
+        .container{
+            height: 400px;
+            width: 400px;
+            margin: auto;
+            
+        }
+
+        span{
+            font-size: 8rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        input[type='button']{
+           font-size: 1.5rem;
+           margin-top: 10px;
+           border-radius: 5px;
+           font-family: Verdana, Geneva, Tahoma, sans-serif;    
+
+        }
+
+        .in{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>COUNTER</h1>
+    
+    <div class="container">
+        <span id="number">0</span>
+        <br>
+       <div class="in">
+        <input type="button" id="decrease" value="Decrease" onclick="de()">
+        <input type="button" id="reset" value="Reset" onclick="re()">
+        <input type="button" id="increase" value="Increase" onclick="inc()">
+        
+    </div>
+    </div>
+
+    <script>
+      let count=0;
+
+     
+
+      function de(){
+        count-=1
+        document.getElementById("number").innerHTML=count;
+      }
+
+      function re(){
+        count=0
+        document.getElementById("number").innerHTML=count;
+      }
+
+      function inc(){
+        count+=1
+        document.getElementById("number").innerHTML=count;
+      }
+
+         
+    </script>
+</body>
+</html>
